@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ShortCode_XH</title>
+<link href="stylesheet.css" rel="stylesheet" type="text/css"><!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } 
+ul.nav a { zoom: 1; }  
+</style>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="SimplePlugins_XH.gif" width="240" height="240"></a> 
+    <!-- end .header --></div>
+  <div class="title">
+    SimplePlugins_XH
+  </div>
+  <div class="desc">
+    <p>This plugin is to very Simple plugins' Library <br>
+    <span lang="en"></span></p>
+  </div>
+  <div class="clearfloat"></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="help.htm#notice">Important Notice</a></li>
+        <li><a href="help.htm#requirements">Requirements</a></li>
+        <li><a href="help.htm#installation">Installation</a></li>
+        <li><a href="help.htm#settings">Settings</a></li>
+        <li><a href="help.htm#usage">For Developer</a></li>
+        <li><a href="help.htm#license">License</a></li>
+        <li><a href="help.htm#filelist">List</a></li></ul>
+  <!-- end .sidebar1 --></div>
+  <div class="content">
+    <div id="body">
+      <p><strong>Please do read this documentation, <em>before</em> you encounter any problems!</strong></p>
+      <h2><a name="notice">Important Notice</a></h2>
+      <p><strong>The current version is merely a draft. Everything might change, and  there may be severe bugs and limitations as it is barely tested. It is a so  called alpha version. Use with utmost caution!</strong></p>
+      <div>
+        <div align="right"><a href="help.htm#">back to top</a></div>
+      </div>
+      <h2><a name="requirements">Requirements</a></h2>
+      <p>SimplePlugins_XH is a plugin for CMSimple_XH.  <br>
+      </p>
+
+      <p>&nbsp;</p>
+      <div>
+        <div align="right"><a href="help.htm#">back to top</a></div>
+      </div>
+      <h2><a name="installation">Installation</a></h2>
+      <p>The installation is done as with many other CMSimple_XH plugins.  See the <a href="http://www.cmsimple-xh.org/wiki/doku.php/installation"> CMSimple_XH wiki</a> for further details.</p>
+      <ol>
+        <li><strong>Backup the data on your server.</strong></li>
+        <li>Unzip the distribution on your computer.</li>
+		<li><font color="#ff0000">Edit & Set Your 'Google AdSense Code' , 'Google Map API Key'</font>
+			<ol>
+				<li>Google AdSense Code : simpleplugins_xh/simpleplugins_library/<font color="#ff0000">g_adsense</font>/index.php
+				</li>
+				<li>Google Map API Key : simpleplugins_xh/simpleplugins_library/<font color="#ff0000">simple_google_map</font>/index.php
+				</li>
+				<li>Google Map API Key : simpleplugins_xh/simpleplugins_library/<font color="#ff0000">simple_google_map<b>2</b></font>/index.php
+				</li>
+			</ol>
+		</li>
+
+        <li>Upload the whole directory to your server into the CMSimple_XH directory.
+        <br>
+        <ul>
+          <li>plugins/simpleplugins_xh/* ----&gt; plugins/simpleplugins_xh/*.</li>
+        </ul>
+        </li>
+      </ol>
+      <h2>Included Library</h2>
+<ol>
+<li>add_qrcode : Display the QR code</li>
+<li>admin_only : This is displayed only when admin login.</li>
+<li>bclock : Show Clock</li>
+<li>browser-shots : Automate the process of taking website screenshots.</li>
+<li>g_adsense : Google AdSense</li>
+<li>h_tag : H1,H2,H3 tag</li>
+<li>mailaddress_hide : Converts email addresses characters to HTML entities to block spam bots</li>
+<li>mailaddress_hide_js : Converts email addresses characters to block spam bots By JavaScript.</li>
+<li>make_ruby : Display the ruby (HTML TAG) code</li>
+<li>responsive_iframe : responsive iframe</li>
+<li>simple_google_map : Display Google MAP (responsive)</li>
+<li>simple_google_map2 : Display Google MAP By Js  (responsive)</li>
+</ol>
+      
+      <div>
+        <div align="right"><a href="help.htm#">back to top</a></div>
+      </div>
+      <h2><a name="settings">Settings</a></h2>
+      <ol>
+        <li>Select &quot;Simpleplugins_xh&quot; from &quot;Plugins&quot;.</li>
+        <li>"Language" select ,set your <span id="result_box" lang="en">Translation</span>.</li>
+        <li>"Config" select ,set your <span id="result_box" lang="en">config</span>.</li>
+      </ol>
+      <div>
+        <div align="right"><a href="help.htm#">back to top</a></div>
+      </div>
+      <h2><a name="usage">For Developer :You will also make a simple plugin</h2>
+      <p>Let's See simpleplugins_xh/simpleplugins_library/***/index.php . Very simple code!</p>
+
+      <p>Most simple  plugin is simpleplugins_library/<font color="#ff0000">hellomyplugin</font>/index.php
+</p>
+
+      <div>
+        <div align="right"><a href="help.htm#">back to top</a></div>
+      </div>
+      <h2><a name="license">License</a></h2>
+      <ul>
+        <li></li>
+        <li>Software License terms<br>
+         <a href="http://www.gnu.org/licenses/gpl.html" target="_blank">GPLv3</a>.</li>
+      </ul>
+      <p>© 2015 T. Uchiyama</p>
+      <div>
+        <div align="right"><a href="help.htm#">back to top</a></div>
+      </div>
+      <h2>&nbsp;</h2>
+      <div></div>
+    </div>
+    <h1><a id="filelist"></a> include  List</h1>
+<pre>
+simpleplugins_xh
+|- config
+|- help
+|- languages
+|- simpleplugins_library
+|  |- add_qrcode
+|  |- admin_only
+|  |- bclock
+|  |- browser-shots
+|  |- g_adsense
+|  |- h_tag
+|  |- hellomyplugin
+|  |- mailaddress_hide_js
+|  |- mailadoress_hide
+|  |- make_ruby
+|  |- responsive_iframe
+|  |- simple_google_map
+|  +- simple_google_map2
+|- admin.php
+|- index.php
+|- README.txt
++- Simpleplugins_view.php
+</pre>
+
+    <!-- end .content --></div>
+  <div class="footer">
+    <p align="center"><a href="http://cmsimple-jp.org" target="_blank">CMSimple-jp.org</a></p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>
