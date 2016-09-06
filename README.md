@@ -13,14 +13,14 @@ very very Simple Plugins Library for CMSimple_XH
 4. **browser-shots** : Automate the process of taking website screenshots.
 5. **g_adsense** : Google AdSense
 6. **h_tag** : H1,H2,H3 tag
-7. **mailaddress_hide** : Converts emailaddresses characters to HTMLentities to block spambots
-8. **mailaddress_hide_js** : Converts emailaddresses characters to block spambots By JavaScript.
+7. **mailaddress_hide** : Converts email addresses characters to HTMLentities to block spambots
+8. **mailaddress_hide_js** : Converts email addresses characters to block spambots By JavaScript.
 9. **make_ruby** : Display the ruby(HTMLTAG) code
 10. **responsive_iframe** : responsive iframe
-11. **simple_google_map** : Display Google MAP(responsive)
-12. **simple_google_map2** : Display Google MAP By Js(responsive)  
+11. **simple_google_map** : Display Google MAPs(responsive)
+12. **simple_google_map2** : Display Google MAPs By Js(responsive)  
 
 Demo : http://cmsimple-jp.org/xh_plugin/  
-Forum : http://cmsimpleforum.com/viewforum.php?f=12  
+Forum : http://cmsimpleforum.com/viewforum.php?f=12&t=11305     
 
 
