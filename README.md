@@ -21,6 +21,6 @@ very very Simple Plugins Library for CMSimple_XH
 12. **simple_google_map2** : Display Google MAPs By Js(responsive)  
 
 Demo : http://cmsimple-jp.org/xh_plugin/  
-Forum : http://cmsimpleforum.com/viewforum.php?f=12&t=11305     
+Forum : http://cmsimpleforum.com/viewtopic.php?f=12&t=11305       
 
 
