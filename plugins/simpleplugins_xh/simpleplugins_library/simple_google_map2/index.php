@@ -4,7 +4,7 @@
  *  File name : index.php
  *  Summery   ; Display Google MAP (js type)
  *  Version   : 0.1
- *  Auther    : Takashi Uchiyama <http://cmsimple-xh.org/>
+ *  Auther    : Takashi Uchiyama <http://cmsimple-jp.org>
  *  License : GPLv3.
  *****************************************************
  * Useage : {{{simple_google_map2($address [,$zoom ,$description ,$width,$height ,$map_type_control]);}}}

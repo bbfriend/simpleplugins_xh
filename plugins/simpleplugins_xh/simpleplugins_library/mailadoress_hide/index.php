@@ -4,7 +4,7 @@
  *  File name : index.php
  *  Summary :   Converts email addresses characters to HTML entities to block spam bots
  *  Version   : 0.1
- *  Auther    : Takashi Uchiyama <http://cmsimple-xh.org/>
+ *  Auther    : Takashi Uchiyama <http://cmsimple-jp.org>
  *  License : GPLv3.
  *****************************************************
  * Useage : {{{mailaddress_hide($mail_address);}}}

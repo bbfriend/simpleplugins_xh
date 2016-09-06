@@ -3,7 +3,7 @@
  *  Plugin name : h_tag
  *  File name : index.php
  *  Summary : H1,H2,H3 tag 
- *  Auther    : Takashi Uchiyama <http://cmsimple-xh.org/>
+ *  Auther    : Takashi Uchiyama <http://cmsimple-jp.org>
  *  License : GPLv3.
  *****************************************************
  * Useage : {{{h_tag($string [, $h123 , $class]) }}}

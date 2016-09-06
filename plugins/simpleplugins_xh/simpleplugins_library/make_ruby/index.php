@@ -4,7 +4,7 @@
  *  File name : index.php
  *  Summery   : Display the ruby(HTML TAG) code
  *  Version   : 0.1
- *  Auther    : Takashi Uchiyama <http://cmsimple-xh.org/>
+ *  Auther    : Takashi Uchiyama <http://cmsimple-jp.org>
  *  License : GPLv3.
  *****************************************************
  * Useage : {{{make_ruby($string , $rp_string);}}}

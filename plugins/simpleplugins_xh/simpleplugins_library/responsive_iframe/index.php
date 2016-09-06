@@ -4,7 +4,7 @@
  *  File name : index.php
  *  Summary : responsive iframe 
  *  Version   : 0.1
- *  Auther    : Takashi Uchiyama <http://cmsimple-xh.org/>
+ *  Auther    : Takashi Uchiyama <http://cmsimple-jp.org>
  *  License : GPLv3.
  *****************************************************
  * Useage : {{{responsive_iframe($string [,$max_width ,$min_width]); }}}

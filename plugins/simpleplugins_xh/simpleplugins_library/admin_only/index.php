@@ -4,7 +4,7 @@
  *  File name : index.php
  *  Summery   : This is displayed only when admin login.
  *  Version   : 0.1
- *  Auther    : Takashi Uchiyama <http://cmsimple-xh.org/>
+ *  Auther    : Takashi Uchiyama <http://cmsimple-jp.org>
  *  License : GPLv3.
  *****************************************************
  * Useage : {{{admin_only($string[,$class]);}}}

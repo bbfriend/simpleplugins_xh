@@ -4,7 +4,7 @@
  *  File name : index.php
  *  Summary :   Converts email addresses characters to block spam bots By JavaScript.
  *  Version   : 0.1
- *  Auther    : Takashi Uchiyama <http://cmsimple-xh.org/>
+ *  Auther    : Takashi Uchiyama <http://cmsimple-jp.org>
  *  License : GPLv3.
  *****************************************************
  * Useage : {{{mailaddress_hide_js($string);}}}

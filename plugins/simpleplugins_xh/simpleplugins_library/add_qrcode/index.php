@@ -4,7 +4,7 @@
  *  File name : index.php
  *  Summery   ; Display the QR code
  *  Version   : 0.1
- *  Auther    : Takashi Uchiyama <http://cmsimple-xh.org/>
+ *  Auther    : Takashi Uchiyama <http://cmsimple-jp.org>
  *  License : GPLv3.
  *****************************************************
  * Useage : {{{add_qrcode($string[,$size]);}}}

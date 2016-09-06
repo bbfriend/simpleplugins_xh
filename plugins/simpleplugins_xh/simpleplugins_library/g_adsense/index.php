@@ -3,7 +3,7 @@
  *  Plugin name : g_adsense
  *  File name : index.php
  *  Summery   ; Display the Google AdSense 
- *  Auther    : Takashi Uchiyama <http://cmsimple-xh.org/>
+ *  Auther    : Takashi Uchiyama <http://cmsimple-jp.org>
  *  License : GPLv3.
  *****************************************************
  * Useage : {{{g_adsense();}}}
