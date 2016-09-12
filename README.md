@@ -6,6 +6,11 @@ very very Simple Plugins Library for CMSimple_XH
 2:Upload the whole directory to your server into the CMSimple_XH directory.   
 ◦plugins/simpleplugins_xh/* ----> plugins/simpleplugins_xh/*.  
 
+## change log  
+◦ 2016/09/12 add 13th plugin : recently_changed 
+◦ First rerese : 12 plugins 2016/09/06  
+
+
 ## included Library  
 1. **add_qrcode** : Display the QRcode
 2. **admin_only** : This is displayed only when admin login.
