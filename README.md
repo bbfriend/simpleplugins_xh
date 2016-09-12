@@ -19,6 +19,7 @@ very very Simple Plugins Library for CMSimple_XH
 10. **responsive_iframe** : responsive iframe
 11. **simple_google_map** : Display Google MAPs(responsive)
 12. **simple_google_map2** : Display Google MAPs By Js(responsive)  
+13. **recently_changed** : display a list of pages that have most recently been changed. (2016/09/12)   
 
 Demo : http://cmsimple-jp.org/xh_plugin/  
 Forum : http://cmsimpleforum.com/viewtopic.php?f=12&t=11305       
