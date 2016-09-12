@@ -7,7 +7,7 @@ very very Simple Plugins Library for CMSimple_XH
 ◦plugins/simpleplugins_xh/* ----> plugins/simpleplugins_xh/*.  
 
 ## change log  
-◦ 2016/09/12 add 13th plugin : recently_changed 
+◦ 2016/09/12 add 13th plugin : recently_changed    
 ◦ First rerese : 12 plugins 2016/09/06  
 
 
