@@ -30,9 +30,12 @@ if (!function_exists('recently_changed')) {
 	    global $pd_router;
 
 	    $pageData = $pd_router->find_all();
-	    uasort($pageData, function ($a, $b) {
-	        return $b['last_edit'] - $a['last_edit'];
-	    });
+
+//	    uasort($pageData, function ($a, $b) { // anonymous function >= PHP5.3
+//	        return $b['last_edit'] - $a['last_edit'];
+//	    });
+
+	    uasort($pageData, recently_changed_func($a, $b) ); 
 
 	    $pages = array();
 	    $i = 0;
@@ -56,5 +59,11 @@ if (!function_exists('recently_changed')) {
 	    $html .= '</ul>';
 	    return $html;
 	}
+
+
+	function recently_changed_func($a, $b) {
+	    return $b['last_edit'] - $a['last_edit'];
+	}
+
 }
 ?>
