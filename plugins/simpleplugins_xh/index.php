@@ -31,7 +31,7 @@ if (!defined('CMSIMPLE_XH_VERSION')) {
 /**
  * The plugin version.
  */
-define('SIMPLEPLUIGNS_XH_VERSION', '1.01');
+define('SIMPLEPLUIGNS_XH_VERSION', '1.02');
 
 
 /*

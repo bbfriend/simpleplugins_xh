@@ -52,7 +52,11 @@ function simpleplugins_xh_version()
  * Handle the plugin administration.
  */
 
-if (isset($simpleplugins_xh) && $simpleplugins_xh == 'true') {
+//if (isset($simpleplugins_xh) && $simpleplugins_xh == 'true') {
+if (function_exists('XH_wantsPluginAdministration')
+    && XH_wantsPluginAdministration('simpleplugins_xh')
+    || isset($simpleplugins_xh) && $simpleplugins_xh == 'true'){
+
 //    $o .= print_plugin_admin('on'); //Returns the plugin menu.
 
 //    if ($admin == 'plugin_config' || $admin == 'plugin_language') {
