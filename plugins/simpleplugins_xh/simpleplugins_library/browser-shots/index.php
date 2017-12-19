@@ -50,7 +50,7 @@ class BrowserShots2 {
 	 * @param string $subject The string being searched and replaced on, otherwise known as the haystack.
 	 * @return string The string with the replaced svalues.
 	 */
-	function _deep_replace( $search, $subject ) {
+	public function _deep_replace( $search, $subject ) {
 		$subject = (string) $subject;
 
 		$count = 1;
@@ -76,7 +76,7 @@ class BrowserShots2 {
 	 * @param string $_context Private. Use esc_url_raw() for database usage.
 	 * @return string The cleaned $url after the 'clean_url' filter is applied.
 	 */
-	function esc_url( $url, $protocols = null, $_context = 'display' ) {
+	public function esc_url( $url, $protocols = null, $_context = 'display' ) {
 		$original_url = $url;
 
 		if ( '' == $url )
@@ -135,16 +135,28 @@ class BrowserShots2 {
 	 * @param string $string Content to normalize entities
 	 * @return string Content with normalized entities
 	 */
-	function wp_kses_normalize_entities($string) {
+	private function wp_kses_normalize_entities($string) {
 		// Disarm all entities by converting & to &amp;
 
 		$string = str_replace('&', '&amp;', $string);
 
 		// Change back the allowed entities in our entity whitelist
 
-		$string = preg_replace_callback('/&amp;([A-Za-z]{2,8}[0-9]{0,2});/', 'wp_kses_named_entities', $string);
-		$string = preg_replace_callback('/&amp;#(0*[0-9]{1,7});/', 'wp_kses_normalize_entities2', $string);
-		$string = preg_replace_callback('/&amp;#[Xx](0*[0-9A-Fa-f]{1,6});/', 'wp_kses_normalize_entities3', $string);
+//		$string = preg_replace_callback('/&amp;([A-Za-z]{2,8}[0-9]{0,2});/', 'wp_kses_named_entities', $string);
+//		$string = preg_replace_callback('/&amp;#(0*[0-9]{1,7});/', 'wp_kses_normalize_entities2', $string);
+//		$string = preg_replace_callback('/&amp;#[Xx](0*[0-9A-Fa-f]{1,6});/', 'wp_kses_normalize_entities3', $string);
+// +++ Warning: preg_replace_callback(): Requires argument 2
+
+		//array($this, '***')  >= PHP5.2
+		$string = preg_replace_callback('/&amp;([A-Za-z]{2,8}[0-9]{0,2});/', array($this, 'wp_kses_named_entities'), $string);
+		$string = preg_replace_callback('/&amp;#(0*[0-9]{1,7});/', array($this, 'wp_kses_normalize_entities2'), $string);
+		$string = preg_replace_callback('/&amp;#[Xx](0*[0-9A-Fa-f]{1,6});/', array($this, 'wp_kses_normalize_entities3'), $string);
+
+		// "self:: ****" >= PHP5.3
+//		$string = preg_replace_callback('/&amp;([A-Za-z]{2,8}[0-9]{0,2});/', "self::wp_kses_named_entities", $string);
+//		$string = preg_replace_callback('/&amp;#(0*[0-9]{1,7});/', "self::wp_kses_normalize_entities2", $string);
+//		$string = preg_replace_callback('/&amp;#[Xx](0*[0-9A-Fa-f]{1,6});/', "self::wp_kses_normalize_entities3", $string);
+
 
 		return $string;
 	}
@@ -160,7 +172,7 @@ class BrowserShots2 {
 	 * @param array $matches preg_replace_callback() matches array
 	 * @return string Correctly encoded entity
 	 */
-	function wp_kses_named_entities($matches) {
+	private function wp_kses_named_entities($matches) {
 		global $allowedentitynames;
 
 		if ( empty($matches[1]) )
@@ -181,7 +193,7 @@ class BrowserShots2 {
 	 * @param array $matches preg_replace_callback() matches array
 	 * @return string Correctly encoded entity
 	 */
-	function wp_kses_normalize_entities2($matches) {
+	private function wp_kses_normalize_entities2($matches) {
 		if ( empty($matches[1]) )
 			return '';
 
@@ -207,7 +219,7 @@ class BrowserShots2 {
 	 * @param array $matches preg_replace_callback() matches array
 	 * @return string Correctly encoded entity
 	 */
-	function wp_kses_normalize_entities3($matches) {
+	private function wp_kses_normalize_entities3($matches) {
 		if ( empty($matches[1]) )
 			return '';
 
@@ -220,7 +232,7 @@ class BrowserShots2 {
 	 * @param int $i Unicode value
 	 * @return bool True if the value was a valid Unicode number
 	 */
-	function valid_unicode($i) {
+	private function valid_unicode($i) {
 		return ( $i == 0x9 || $i == 0xa || $i == 0xd ||
 				($i >= 0x20 && $i <= 0xd7ff) ||
 				($i >= 0xe000 && $i <= 0xfffd) ||
@@ -240,7 +252,7 @@ class BrowserShots2 {
 	 * @param array $allowed_protocols Allowed protocols to keep
 	 * @return string Filtered content
 	 */
-	function wp_kses_bad_protocol($string, $allowed_protocols) {
+	private function wp_kses_bad_protocol($string, $allowed_protocols) {
 		$string = $this -> wp_kses_no_null($string);
 		$iterations = 0;
 
@@ -264,7 +276,7 @@ class BrowserShots2 {
 	 * @param string $string
 	 * @return string
 	 */
-	function wp_kses_no_null($string) {
+	private function wp_kses_no_null($string) {
 		$string = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F]/', '', $string);
 		$string = preg_replace('/(\\\\0)+/', '', $string);
 
@@ -282,7 +294,7 @@ class BrowserShots2 {
 	 * @param string $allowed_protocols Allowed protocols
 	 * @return string Sanitized content
 	 */
-	function wp_kses_bad_protocol_once($string, $allowed_protocols, $count = 1 ) {
+	private function wp_kses_bad_protocol_once($string, $allowed_protocols, $count = 1 ) {
 		$string2 = preg_split( '/:|&#0*58;|&#x0*3a;/i', $string, 2 );
 		if ( isset($string2[1]) && ! preg_match('%/\?%', $string2[0]) ) {
 			$string = trim( $string2[1] );
@@ -313,7 +325,7 @@ class BrowserShots2 {
 	 * @param string $allowed_protocols Allowed protocols
 	 * @return string Sanitized content
 	 */
-	function wp_kses_bad_protocol_once2( $string, $allowed_protocols ) {
+	private function wp_kses_bad_protocol_once2( $string, $allowed_protocols ) {
 		$string2 = $this -> wp_kses_decode_entities($string);
 		$string2 = preg_replace('/\s/', '', $string2);
 		$string2 = $this -> wp_kses_no_null($string2);
@@ -343,10 +355,23 @@ class BrowserShots2 {
 	 * @param string $string Content to change entities
 	 * @return string Content after decoded entities
 	 */
-	function wp_kses_decode_entities($string) {
-		$string = preg_replace_callback('/&#([0-9]+);/', '_wp_kses_decode_entities_chr', $string);
-		$string = preg_replace_callback('/&#[Xx]([0-9A-Fa-f]+);/', '_wp_kses_decode_entities_chr_hexdec', $string);
+	private function wp_kses_decode_entities($string) {
 
+//		$string = preg_replace_callback('/&#([0-9]+);/', '_wp_kses_decode_entities_chr', $string);
+//		$string = preg_replace_callback('/&#[Xx]([0-9A-Fa-f]+);/', '_wp_kses_decode_entities_chr_hexdec', $string);
+// +++ Warning: preg_replace_callback(): Requires argument 2
+
+		//array($this, '***')  >= PHP5.2
+		$string = preg_replace_callback('/&#([0-9]+);/', array($this, '_wp_kses_decode_entities_chr'), $string);
+		$string = preg_replace_callback('/&#[Xx]([0-9A-Fa-f]+);/', array($this,'_wp_kses_decode_entities_chr_hexdec'), $string);
+
+
+		// "self:: ****" >= PHP5.3
+//		$string = preg_replace_callback('/&#([0-9]+);/', "self::_wp_kses_decode_entities_chr", $string);
+//		$string = preg_replace_callback('/&#[Xx]([0-9A-Fa-f]+);/', "self::_wp_kses_decode_entities_chr_hexdec", $string);
+
+//		$string = preg_replace_callback('/&#([0-9]+);/', array(get_class($this), '_wp_kses_decode_entities_chr'), $string);
+//		$string = preg_replace_callback('/&#[Xx]([0-9A-Fa-f]+);/', array(get_class($this), '_wp_kses_decode_entities_chr_hexdec'), $string);
 		return $string;
 	}
 

@@ -31,11 +31,14 @@ if (!function_exists('recently_changed')) {
 
 	    $pageData = $pd_router->find_all();
 
-//	    uasort($pageData, function ($a, $b) { // anonymous function >= PHP5.3
-//	        return $b['last_edit'] - $a['last_edit'];
-//	    });
-
-	    uasort($pageData, recently_changed_func($a, $b) ); 
+		$phpver = phpversion();
+		if( version_compare( $phpver, "5.3.0", ">=")) {
+		    uasort($pageData, function ($a, $b) { // anonymous function >= PHP5.3
+		        return $b['last_edit'] - $a['last_edit'];
+		    });
+		}else{
+			uasort($pageData, recently_changed_func($a, $b) ); 
+		}
 
 	    $pages = array();
 	    $i = 0;
